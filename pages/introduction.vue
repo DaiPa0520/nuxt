@@ -10,7 +10,7 @@
               <h5>市面上的開店系統</h5>
               <img
                 class="w-50"
-                src="/images/01.png"
+                src="/images/index/contrast_01.svg"
                 data-aos="zoom-in"
                 data-aos-delay="300"
                 alt
@@ -20,7 +20,7 @@
               <h5>市面上的開店系統</h5>
               <img
                 class="w-50"
-                src="/images/02.png"
+                src="/images/index/contrast_02.svg"
                 data-aos="zoom-in"
                 data-aos-delay="300"
                 alt
@@ -37,7 +37,7 @@
               <DialogBox  :title="'商品系統'" />
               <img
                 class="w-50 pb-2"
-                src="/images/13.svg"
+                src="/images/index/features_01.svg"
                 data-aos="zoom-in"
                 data-aos-delay="300"
                 alt
@@ -50,7 +50,7 @@
               <DialogBox  :title="'商品系統'" />
               <img
                 class="mr-5 mr-md-5 w-50 pb-2"
-                src="/images/14.svg"
+                src="/images/index/features_02.svg"
                 data-aos="zoom-in"
                 data-aos-delay="300"
                 alt
@@ -63,7 +63,7 @@
               <DialogBox  :title="'商品系統'" />
               <img
                 class="w-50 pb-2"
-                src="/images/15.svg"
+                src="/images/index/features_03.svg"
                 data-aos="zoom-in"
                 data-aos-delay="500"
                 alt
@@ -76,7 +76,7 @@
               <DialogBox  :title="'商品系統'" />
               <img
                 class="w-50 pb-2"
-                src="/images/16.svg"
+                src="/images/index/features_04.svg"
                 data-aos="zoom-in"
                 data-aos-delay="600"
                 alt
@@ -98,7 +98,7 @@
               <h6>One-Page-Web</h6>
               <img
                 class="w-50"
-                src="/images/17.svg"
+                src="/images/index/type_01.svg"
                 data-aos="zoom-in"
                 data-aos-delay="300"
                 alt
@@ -109,7 +109,7 @@
               <h6>Online Shop</h6>
               <img
                 class="w-50"
-                src="/images/18.svg"
+                src="/images/index/type_02.svg"
                 data-aos="zoom-in"
                 data-aos-delay="300"
                 alt

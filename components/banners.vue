@@ -1,7 +1,7 @@
 <template>
   <section class="banner">
     <div class="banner d-flex justify-content-center align-items-center">
-      <img class="w-100" src="~/assets/images/banner.jpg" alt data-aos="zoom-in" />
+      <img class="w-100" src="/images/index/banner_01.svg" alt data-aos="zoom-in" />
     </div>
   </section>
 </template>

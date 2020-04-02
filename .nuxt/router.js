@@ -5,6 +5,7 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _55e15b6e = () => interopDefault(import('..\\pages\\about.vue' /* webpackChunkName: "pages_about" */))
 const _42a6c4c1 = () => interopDefault(import('..\\pages\\cost.vue' /* webpackChunkName: "pages_cost" */))
+const _7ad01092 = () => interopDefault(import('..\\pages\\grpc.vue' /* webpackChunkName: "pages_grpc" */))
 const _3924e28e = () => interopDefault(import('..\\pages\\introduction.vue' /* webpackChunkName: "pages_introduction" */))
 const _096e634c = () => interopDefault(import('..\\pages\\question.vue' /* webpackChunkName: "pages_question" */))
 const _10a1bbf6 = () => interopDefault(import('..\\pages\\registered.vue' /* webpackChunkName: "pages_registered" */))
@@ -35,6 +36,10 @@ export const routerOptions = {
     path: "/cost",
     component: _42a6c4c1,
     name: "cost"
+  }, {
+    path: "/grpc",
+    component: _7ad01092,
+    name: "grpc"
   }, {
     path: "/introduction",
     component: _3924e28e,

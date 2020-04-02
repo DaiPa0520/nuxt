@@ -9,10 +9,10 @@
           <div class="row align-items-center d-flex">
             <!-- 左 -->
             <div class="col-md-6 text-center">
-              <h5>市面上的開店系統</h5>
+              <h5>市面上的開店系統{{ip}}</h5>
               <img
                 class="w-50"
-                src="~/assets/images/01.png"
+                src="/images/index/advisory.svg"
                 data-aos="zoom-in"
                 data-aos-delay="300"
                 alt
@@ -72,7 +72,7 @@
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-2">
-                    <button type="submit" class="btn btn-primary">Sign in</button>
+                    <button type="button" @click="test()" class="btn btn-primary">Sign in</button>
                   </div>
                 </div>
               </form>
@@ -89,10 +89,32 @@
 import VueRecaptcha from "vue-recaptcha";
 export default {
   components: { VueRecaptcha },
+  data() {
+    return {
+      ip: "xx",
+      dd: "666"
+    };
+  },
   created() {
     console.log(1235555);
   },
+  async asyncData({ $axios }) {
+    const ip = await $axios.$get("http://icanhazip.com");
+    // const dd = await $axios.$post('https://ingress.4ding.site/advisory',data)
+    return { ip };
+  },
   methods: {
+    test: function() {
+      let data = {
+        type: 1,
+        contacter: "g8g8",
+        phone: "0930123456",
+        email: "gg88@gmail.com",
+        location: "taiwan",
+        contact: "24:00"
+      };
+      const dd = this.$axios.$post("/advisory", data);
+    },
     onSubmit: function() {
       this.$refs.invisibleRecaptcha.execute();
     },

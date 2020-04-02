@@ -17,7 +17,7 @@
               </p>
             </div>
             <div class="report-img pb-3 col-md-5">
-              <img class="w-100" src="~/assets/images/01.png" alt />
+              <img class="w-100" src="/images/index/index_01.svg" alt />
             </div>
           </div>
         </div>
@@ -26,7 +26,7 @@
         <div class="container d-flex justify-content-center">
           <div class="row align-items-center d-flex column">
             <div class="report-img pb-3 col-md-6">
-              <img class="w-100" src="~/assets/images/02.png" alt />
+              <img class="w-100" src="/images/index/index_02.svg" alt />
             </div>
             <div class="report-txt text-left col-md-6">
               <h4>多商店行銷</h4>
@@ -57,7 +57,7 @@
               </p>
             </div>
             <div class="mechanism-img pb-3 col-md-5">
-              <img class="w-100" src="~/assets/images/03.png" alt />
+              <img class="w-100" src="/images/index/index_03.svg" alt />
             </div>
           </div>
         </div>
