@@ -1,0 +1,93 @@
+// 換頁過廠特效
+.page-enter-active, .page-leave-active {
+  transition: opacity .5s;
+}
+.page-enter, .page-leave-active {
+  opacity: 0;
+}
+
+a:hover {
+  text-decoration: none
+}
+
+h6 {
+  color: #ababab;
+}
+
+.lt-banner {
+  margin-top: 56px;
+  background-color: #bee1f4;
+}
+
+.store {
+  box-shadow: -1px 3px 8px #ccc;
+}
+
+.btn-primary {
+  width: 114px;
+}
+
+.carousel-indicators li {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
+
+.panel-heading {
+  padding: 0;
+  border: 0;
+}
+
+.panel-default>.panel-heading {
+  color: #333;
+  background-color: #f5f5f5;
+  border-color: #ddd;
+}
+
+.panel-title>a,
+.panel-title>a:active {
+  display: block;
+  padding: 15px;
+  color: #555;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  text-decoration: none;
+}
+
+.panel-heading a:before {
+  width: 0;
+  height: 10px;
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  bottom: 0;
+  transition: all 0.5s;
+  content: "";
+  pointer-events: none;
+  border-style: solid;
+  border-width: 7px 7px 0 7px;
+  border-color: #333 transparent transparent;
+}
+
+.panel-heading.active a:before {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+
+
+
+@media (max-width: 767px) {
+  .column-reverse {
+      flex-direction: column-reverse !important;
+  }
+
+  .column {
+      flex-direction: column !important;
+  }
+}
