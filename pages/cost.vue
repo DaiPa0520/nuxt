@@ -2,32 +2,24 @@
   <div id="page">
     <Headers></Headers>
     <section id="page">
-      <BannersTilte :title="title" :desc="desc"></BannersTilte>
+      <BannersTilte :keys="keys"></BannersTilte>
       <!-- 上方兩隔 -->
       <section class="pt-5 pb-5">
         <div class="container">
           <div class="row align-items-center d-flex">
             <div class="col-md-6 text-center">
-              <img
-                class="w-50"
-                src="~/assets/images/01.png"
-                data-aos="zoom-in"
-                data-aos-delay="300"
-                alt
-              />
-              <h2>市面上的開店系統</h2>
+              <div class="pay">
+                <SvgPay01  class="w-100" />
+              </div>
+              <h2>隨用隨付</h2>
               <h5>市面上的開店系統</h5>
               <h5>市面上的開店系統</h5>
             </div>
             <div class="col-md-6 text-center">
-              <img
-                class="w-50"
-                src="~/assets/images/01.png"
-                data-aos="zoom-in"
-                data-aos-delay="300"
-                alt
-              />
-              <h2>市面上的開店系統</h2>
+              <div class="pay">
+                <SvgPay02   class="w-100" />
+              </div>
+              <h2>儲值消費</h2>
               <h5>市面上的開店系統</h5>
               <h5>市面上的開店系統</h5>
             </div>
@@ -97,43 +89,33 @@
           </div>
         </div>
       </section>
- 
+
       <!-- 下方三格 -->
       <section class="pt-5 pb-5">
         <div class="container">
           <div class="row align-items-center d-flex">
             <div class="col-md-4 text-center">
-              <img
-                class="w-50"
-                src="~/assets/images/01.png"
-                data-aos="zoom-in"
-                data-aos-delay="300"
-                alt
-              />
+              <div class="cp">
+                 <SvgCost01 class="w-100" />
+              </div>
+           
               <h5>市面上的開店系統</h5>
               <h5>市面上的開店系統</h5>
               <h5>市面上的開店系統</h5>
             </div>
             <div class="col-md-4 text-center">
-              <img
-                class="w-50"
-                src="~/assets/images/01.png"
-                data-aos="zoom-in"
-                data-aos-delay="300"
-                alt
-              />
+              <div class="cp">
+                 <SvgCost02 class="w-100" />
+              </div>
               <h5>市面上的開店系統</h5>
               <h5>市面上的開店系統</h5>
               <h5>市面上的開店系統</h5>
             </div>
             <div class="col-md-4 text-center">
-              <img
-                class="w-50"
-                src="~/assets/images/01.png"
-                data-aos="zoom-in"
-                data-aos-delay="300"
-                alt
-              />
+              <div class="cp">
+                <SvgCost03 class="w-100" />
+              </div>
+
               <h5>市面上的開店系統</h5>
               <h5>市面上的開店系統</h5>
               <h5>市面上的開店系統</h5>
@@ -151,8 +133,7 @@ export default {
   loading: false,
   data() {
     return {
-      title: "計畫費用",
-      desc: "計畫費用balabalabalabala"
+      keys: "cost"
     };
   },
   created() {
@@ -161,8 +142,29 @@ export default {
 };
 </script>
 
-<style scoped >
+
+<style lang="scss"  scoped>
 h2 {
   color: goldenrod;
+}
+
+.pay {
+  width: 100%;
+  height: 200px;
+  // background-image: url(/images/index/pay_01.svg);
+  // background-repeat: no-repeat;
+  // background-size: contain;
+  margin-bottom: 20px;
+  &>*{
+    height: 100%;
+  }
+}
+
+.cp {
+  margin: 10px 0px;
+  height: 100px;
+  & > * {
+    height: 100%;
+  }
 }
 </style>

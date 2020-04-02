@@ -50,7 +50,7 @@
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-2">
-                    <button type="submit" class="btn btn-primary">Sign in</button>
+                    <button type="button"  @click="test()" class="btn btn-primary">Sign in</button>
                   </div>
                 </div>
               </form>
@@ -79,6 +79,21 @@
 export default {
   created() {
     console.log(1235555);
+  },
+  methods: {
+    test: function() {
+      let data = {
+        type: 1,
+        contacter: "g8g8",
+        phone: "0930123456",
+        email: "gg88@gmail.com",
+        location: "taiwan",
+        contact: "24:00",
+        bank_code: "123", //一定要三格
+        last_code: "66666" //一定要五格
+      };
+      const dd = this.$axios.$post("/application", data);
+    }
   }
 };
 </script>

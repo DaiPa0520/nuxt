@@ -2,10 +2,10 @@
   <section class="banner">
     <div class="text-center lt-banner pt-4 pb-4">
       <div class="title d-flex justify-content-center align-items-center">
-        <div class="icon cost" ></div>
-        <h4>{{title}}</h4>
+        <div class="icon" :class="list[keys]?  keys : '' " ></div>
+        <h4>{{ list[keys]['name'] }}</h4>
       </div>
-      <h6>{{desc}}</h6>
+      <h6>{{ list[keys]['desc'] }}</h6>
     </div>
   </section>
 </template>
@@ -13,6 +13,12 @@
 export default {
   name: "",
   props: {
+    keys: {
+      type: [String],
+      default: function() {
+        return "introduction";
+      }
+    },
     title: {
       type: [String],
       default: function() {
@@ -34,7 +40,15 @@ export default {
         introduction: {
           name: "系統簡介",
           desc: "introdxxxxxxxxxx",
-        }
+        },
+        cost: {
+          name: "計畫費用",
+          desc: "costxxxx",
+        },
+        question: {
+          name: "常見問題",
+          desc: "questionxxxx",
+        },
       }
     };
   }
@@ -45,6 +59,7 @@ export default {
   background-image: url(/images/banner/orange.png);
   background-repeat: no-repeat;
   background-size: cover;
+  // animation: loading 1s infinite linear;
 }
 h4 {
   font-weight: bold;
@@ -69,4 +84,15 @@ h4 {
     background-image: url(/images/icon/title_03.svg);
   }
 }
+
+
+// @keyframes loading {
+//   from {
+//     background-image: url(/images/banner/banner1.png);
+//   }
+//   to {
+//     background-image: url(/images/banner/banner3.png);
+//   }
+// }
+
 </style>

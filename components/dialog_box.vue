@@ -28,14 +28,14 @@ export default {
 .toast-title {
   height: 65px;
   display: flex;
-  background-image: url(/images/00.svg);
+  background-image: url(/images/icon/index_00.svg);
   background-repeat: no-repeat;
 }
 .toast-title > span {
   color: white;
   white-space: nowrap;
   font-size: x-small;
-  margin: 20px 17px;
+  margin: 20px 14px;
 }
 .toast-title > img {
   visibility: hidden;
