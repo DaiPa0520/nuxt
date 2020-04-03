@@ -750,13 +750,6 @@ export default {};
   transform: translate(200px,200px);
 }
 
-@keyframes move-1 {
-  to {
-    opacity: 1;
-    // transform: translateY(0px);
-  }
-}
-
 @keyframes move {
   to {
     opacity: 1;

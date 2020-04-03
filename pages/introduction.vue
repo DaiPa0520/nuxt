@@ -8,23 +8,25 @@
           <div class="row align-items-center d-flex">
             <div class="col-md-6 text-center">
               <h5>市面上的開店系統</h5>
-              <img
+              <!-- <img
                 class="w-50"
                 src="/images/index/contrast_01.svg"
                 data-aos="zoom-in"
                 data-aos-delay="300"
                 alt
-              />
+              /> -->
+              <SvgContrast01 class="w-50"  />
             </div>
             <div class="col-md-6 text-center">
               <h5>市面上的開店系統</h5>
-              <img
+              <!-- <img
                 class="w-50"
                 src="/images/index/contrast_02.svg"
                 data-aos="zoom-in"
                 data-aos-delay="300"
                 alt
-              />
+              /> -->
+              <SvgContrast02 class="w-50"  />
             </div>
           </div>
         </div>

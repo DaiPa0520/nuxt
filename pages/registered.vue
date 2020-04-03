@@ -10,8 +10,8 @@
             <!-- 左 -->
             <div class="col-md-6 text-center">
               <form>
-                <div class="form-group row">
-                  <div class="col-sm-4">
+                <div class="row">
+                  <div class="form-group col-sm-4">
                     <select class="custom-select" id>
                       <option selected>Choose...</option>
                       <option value="1">One</option>
@@ -19,7 +19,7 @@
                       <option value="3">Three</option>
                     </select>
                   </div>
-                  <div class="col-sm-8">
+                  <div class="form-group col-sm-8">
                     <input type="text" class="form-control" placeholder="Last name" />
                   </div>
                 </div>
@@ -59,13 +59,7 @@
 
             <div class="col-md-6 text-center">
               <h5>市面上的開店系統</h5>
-              <img
-                class="w-50"
-                src="~/assets/images/01.png"
-                data-aos="zoom-in"
-                data-aos-delay="300"
-                alt
-              />
+              <SvgPay02   class="w-50" />
             </div>
           </div>
         </div>
