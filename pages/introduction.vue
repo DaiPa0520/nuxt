@@ -5,7 +5,7 @@
       <BannersTilte :keys="keys"></BannersTilte>
       <section class="pt-5 pb-5">
         <div class="container">
-          <div class="row align-items-center d-flex">
+          <div class="row w-100 align-items-center d-flex">
             <div class="col-md-6 text-center">
               <h5>市面上的開店系統</h5>
               <!-- <img
@@ -15,7 +15,7 @@
                 data-aos-delay="300"
                 alt
               /> -->
-              <SvgContrast01 class="w-50"  />
+              <SvgContrast01 class="w-100"  />
             </div>
             <div class="col-md-6 text-center">
               <h5>市面上的開店系統</h5>
@@ -26,7 +26,7 @@
                 data-aos-delay="300"
                 alt
               /> -->
-              <SvgContrast02 class="w-50"  />
+              <SvgContrast02 class="w-100"  />
             </div>
           </div>
         </div>

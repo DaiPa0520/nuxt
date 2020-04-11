@@ -6,7 +6,7 @@
       <!-- 上方兩隔 -->
       <section class="pt-5 pb-5">
         <div class="container">
-          <div class="row align-items-center d-flex">
+          <div class="row w-100 align-items-center d-flex">
             <div class="col-md-6 text-center">
               <div class="pay">
                 <SvgPay01  class="w-100" />
@@ -30,7 +30,7 @@
       <!-- 中間左右表格 -->
       <section class="pt-5 pb-5" style="background: #f1f1f1">
         <div class="container d-flex justify-content-center">
-          <div class="row align-items-center d-flex column">
+          <div class="row  w-100 align-items-center d-flex column">
             <div class="report-img pb-3 col-md-6">
               <img class="w-100" src="~/assets/images/02.png" alt />
             </div>
@@ -51,7 +51,7 @@
       </section>
       <section class="pt-5 pb-5" style="background: #feffab">
         <div class="container d-flex justify-content-center">
-          <div class="row align-items-center d-flex column-reverse">
+          <div class="row  w-100 align-items-center d-flex column-reverse">
             <div class="report-txt text-left col-md-7">
               <h4>完整報表分析</h4>
               <h6>不是只有訂單報表看營業額而已</h6>
@@ -70,7 +70,7 @@
       </section>
       <section class="pt-5 pb-5" style="background: #f1f1f1">
         <div class="container d-flex justify-content-center">
-          <div class="row align-items-center d-flex column">
+          <div class="row  w-100 align-items-center d-flex column">
             <div class="report-img pb-3 col-md-6">
               <img class="w-100" src="~/assets/images/02.png" alt />
             </div>
@@ -93,7 +93,7 @@
       <!-- 下方三格 -->
       <section class="pt-5 pb-5">
         <div class="container">
-          <div class="row align-items-center d-flex">
+          <div class="row w-100 align-items-center d-flex">
             <div class="col-md-4 text-center">
               <div class="cp">
                  <SvgCost01 class="w-100" />
@@ -150,7 +150,7 @@ h2 {
 
 .pay {
   width: 100%;
-  height: 200px;
+  height: 400px;
   // background-image: url(/images/index/pay_01.svg);
   // background-repeat: no-repeat;
   // background-size: contain;
@@ -161,8 +161,8 @@ h2 {
 }
 
 .cp {
-  margin: 10px 0px;
-  height: 100px;
+  margin: 10px 10px;
+  height: 250px;
   & > * {
     height: 100%;
   }

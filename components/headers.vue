@@ -77,7 +77,7 @@ li {
   color: #fff;
   background-color: #7a7a7a;
   border-color: #888888;
-  box-shadow: -4px 3px 3px #888888;
+  /* box-shadow: -4px 3px 3px #888888; */
 }
 .btn.actived {
   background: #f68d00;
