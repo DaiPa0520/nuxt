@@ -4,53 +4,57 @@
     <section id="page">
       <SliderBanner></SliderBanner>
       <!-- 下方表單 -->
-      <section class="pt-5 pb-5">
+      <section class="pb-5">
         <div class="container">
           <div class="row align-items-center d-flex">
             <!-- 左 -->
-            <div class="col-md-6 text-center">
+            <div class="col-md-6 text-center pt-5">
               <form>
                 <div class="row">
                   <div class="form-group col-sm-4">
                     <select class="custom-select" id>
-                      <option selected>Choose...</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
+                      <option selected>選擇類型</option>
+                      <option value="1">公司名</option>
+                      <option value="2">個人戶</option>
                     </select>
                   </div>
                   <div class="form-group col-sm-8">
-                    <input type="text" class="form-control" placeholder="Last name" />
+                    <input type="text" class="form-control" placeholder="公司名稱" />
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col">
-                    <input type="text" class="form-control" placeholder="First name" />
+                    <input type="text" class="form-control" placeholder="聯絡人" />
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col">
-                    <input type="text" class="form-control" placeholder="First name" />
+                    <input type="text" class="form-control" placeholder="電話" />
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col">
-                    <input type="text" class="form-control" placeholder="First name" />
+                    <input type="text" class="form-control" placeholder="電子郵件" />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="所在地" />
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col">
                     <select class="custom-select" id>
-                      <option selected>Choose...</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
+                      <option selected>方便聯絡時間</option>
+                      <option value="1">上午 09:00</option>
+                      <option value="2">中午 12:00</option>
+                      <option value="3">下午 21:00</option>
                     </select>
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-2">
-                    <button type="button"  @click="test()" class="btn btn-primary">Sign in</button>
+                    <button type="button" @click="test()" class="btn btn-primary">送出</button>
                   </div>
                 </div>
               </form>
