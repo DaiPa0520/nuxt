@@ -6,7 +6,7 @@
       <!-- 下方表單 -->
       <section class="pt-5 pb-5">
         <div class="container">
-          <div class="row align-items-center d-flex">
+          <div v-if="reqisted_success===false" class="row align-items-center d-flex">
             <!-- 左 -->
             <div class="col-md-6 text-center">
               <h5>市面上的開店系統</h5>
@@ -99,7 +99,7 @@
                       :class="{ 'is-invalid' : validation.hasError('contact')}"
                       v-model="contact"
                     >
-                      <option selected>方便聯絡時間</option>
+                      <option value="" selected>方便聯絡時間</option>
                       <option value="09:00">上午 09:00</option>
                       <option value="12:00">中午 12:00</option>
                       <option value="21:00">下午 21:00</option>
@@ -108,7 +108,7 @@
                   </div>
                 </div>
                 <div class="form-group row">
-                  <div class="col" >
+                  <div class="col">
                     <vue-recaptcha
                       ref="recaptcha"
                       @verify="onVerify"
@@ -120,14 +120,37 @@
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-2">
-                    <button type="button" @click="submit" class="btn btn-primary" :class="{ 'btn-secondary disabled' : google_verify==''}" :disabled="google_verify==''" >送出</button>
+                    <button
+                      type="button"
+                      @click="submit"
+                      class="btn btn-primary"
+                      :class="{ 'btn-secondary disabled' : google_verify==''}"
+                      :disabled="google_verify==''"
+                    >送出</button>
                   </div>
                 </div>
               </form>
             </div>
           </div>
+          <!-- 成功驗證 -->
+          <div v-if="reqisted_success===true" class="row align-items-center justify-content-center d-flex">
+            <div class="col-md-12 text-center">
+              <img
+                class="w-50"
+                src="/images/index/dredge.svg"
+                data-aos="zoom-in"
+                data-aos-delay="300"
+                alt
+              />
+              <h1 style="color:#ff870e;font-weight:bold">感謝你的申請，我們將會盡速審核!!</h1>
+              <h5>已將開通申請寄到你的郵箱</h5>
+              <h5>開通成功後，我們將專人及簡訊通知</h5>
+              
+            </div>
+          </div>
         </div>
       </section>
+
       <Footers></Footers>
     </section>
   </div>
@@ -139,21 +162,21 @@ export default {
   components: { VueRecaptcha },
   data() {
     return {
-      ip: "xx",
+      reqisted_success: false,
       type: 1,
       company: "",
       contacter: "",
-      phone: "0930123456",
-      email: "gg88@gmail.com",
-      location: "taiwan",
+      phone: "",
+      email: "",
+      location: "",
       contact: "",
-      bank_code: "123", //一定要三格
-      last_code: "66666", //一定要五格
+      bank_code: "", //一定要三格
+      last_code: "", //一定要五格
       google_verify: ""
     };
   },
   created() {
-    console.log(1235555);
+
   },
   validators: {
     contacter: function(value) {
@@ -187,20 +210,20 @@ export default {
     }
   },
   async asyncData({ $axios }) {
-    const ip = await $axios.$get("http://icanhazip.com");
-    return { ip };
+    // const ip = await $axios.$get("http://icanhazip.com");
+    // return { ip };
   },
   methods: {
     submit: function() {
-      this.$validate().then(function(success) {
+      return this.$validate().then(success => {
         if (success) {
-          console.log("Validation succeeded!");
+          this.sendRegisted();
         } else {
           alert("請確認表單資訊是否正確!!");
         }
       });
     },
-    sendRegisted: function() {
+    async sendRegisted() {
       let data = {
         type: this.type,
         contacter: this.contacter,
@@ -210,7 +233,13 @@ export default {
         contact: this.contact
       };
       if (this.type == 1) data.company = this.company;
-      const dd = this.$axios.$post("/advisory", data);
+      const resp = await this.$axios.$post("/advisory", data);
+      if (resp.code == 0) {
+        this.reqisted_success = true;
+      } else {
+        this.reqisted_success = false;
+        alert(resp.message);
+      }
     },
     onSubmit: function() {
       this.$refs.invisibleRecaptcha.execute();

@@ -88,7 +88,7 @@
                       :class="{ 'is-invalid' : validation.hasError('contact')}"
                       v-model="contact"
                     >
-                      <option selected>方便聯絡時間</option>
+                      <option value="" selected>方便聯絡時間</option>
                       <option value="09:00">上午 09:00</option>
                       <option value="12:00">中午 12:00</option>
                       <option value="21:00">下午 21:00</option>
@@ -154,12 +154,12 @@ export default {
       type: 1,
       company: "",
       contacter: "",
-      phone: "0930123456",
-      email: "gg88@gmail.com",
-      location: "taiwan",
+      phone: "",
+      email: "",
+      location: "",
       contact: "",
-      bank_code: "123", //一定要三格
-      last_code: "66666" //一定要五格
+      bank_code: "", //一定要三格
+      last_code: "" //一定要五格
     };
   },
   created() {},
@@ -207,7 +207,7 @@ export default {
     submit: function() {
       this.$validate().then(function(success) {
         if (success) {
-          console.log("Validation succeeded!");
+          sendRegisted()
         } else {
           alert("請確認表單資訊是否正確!!");
         }

@@ -16,7 +16,7 @@ export default {
     };
   },
   created() {
-    console.log(1235555);
+
   },
   async asyncData({ $axios }) {
     const ip = await $axios.$get("http://icanhazip.com");
