@@ -137,7 +137,7 @@ export default {
     };
   },
   created() {
-    console.log(1235555);
+
   }
 };
 </script>

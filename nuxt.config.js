@@ -101,7 +101,14 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
-    }
+   uglify: {
+      uglifyOptions: {
+        compress: {
+          drop_console: true,
+        },
+      },
+    },
+    // extend(config, ctx) {
+    // }
   }
 }
