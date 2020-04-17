@@ -39,8 +39,9 @@ export default {
   ** Global CSS
   */
   css: [
+    'normalize.css/normalize.css',
     '~/assets/css/bootstrap.min.css',
-    '~/assets/layout.scss',
+    '~/assets/layout.scss'
   ],
   /*
   ** Plugins to load before mounting the App

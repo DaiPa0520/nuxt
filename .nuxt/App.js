@@ -7,10 +7,13 @@ import {
 } from './utils'
 
 import NuxtLoading from './components/nuxt-loading.vue'
+import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
 import '..\\node_modules\\bootstrap\\dist\\css\\bootstrap.css'
 
 import '..\\node_modules\\bootstrap-vue\\dist\\bootstrap-vue.css'
+
+import '..\\node_modules\\normalize.css\\normalize.css'
 
 import '..\\assets\\css\\bootstrap.min.css'
 
@@ -55,7 +58,7 @@ export default {
       }
     }, [
       loadingEl,
-
+      h(NuxtBuildIndicator),
       transitionEl
     ])
   },
@@ -165,6 +168,10 @@ export default {
     },
 
     setLayout (layout) {
+      if(layout && typeof layout !== 'string') {
+        throw new Error('[nuxt] Avoid using non-string value as layout property.')
+      }
+
       if (!layout || !layouts['_' + layout]) {
         layout = 'default'
       }
