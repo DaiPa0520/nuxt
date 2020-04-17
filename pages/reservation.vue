@@ -28,12 +28,12 @@
                       :class="{ 'is-invalid' : validation.hasError('type')}"
                       v-model="type"
                     >
-                      <option value="1">公司名</option>
-                      <option value="2">個人戶</option>
+                      <option value="2">公司名</option>
+                      <option value="1">個人戶</option>
                     </select>
                     <div class="invalid-feedback d-block">{{ validation.firstError('type') }}</div>
                   </div>
-                  <div v-if="type == 1" class="form-group col-sm-8">
+                  <div v-if="type == 2" class="form-group col-sm-8">
                     <input
                       type="text"
                       class="form-control"
@@ -201,7 +201,7 @@ export default {
       return this.$Validator.value(value).required();
     },
     "company ,type": function(company, type) {
-      if (type == 1) {
+      if (type == 2) {
         return this.$Validator.value(company).required();
       }
     },
@@ -225,14 +225,14 @@ export default {
     },
     async sendRegisted() {
       let data = {
-        type: this.type,
+        type: Number(this.type),
         contacter: this.contacter,
         phone: this.phone,
         email: this.email,
         location: this.location,
         contact: this.contact
       };
-      if (this.type == 1) data.company = this.company;
+      if (this.type == 2) data.company = this.company;
       const resp = await this.$axios.$post("/advisory", data);
       if (resp.code == 0) {
         this.reqisted_success = true;
