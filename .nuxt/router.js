@@ -10,6 +10,7 @@ const _3924e28e = () => interopDefault(import('..\\pages\\introduction.vue' /* w
 const _096e634c = () => interopDefault(import('..\\pages\\question.vue' /* webpackChunkName: "pages_question" */))
 const _10a1bbf6 = () => interopDefault(import('..\\pages\\registered.vue' /* webpackChunkName: "pages_registered" */))
 const _61d49ff0 = () => interopDefault(import('..\\pages\\reservation.vue' /* webpackChunkName: "pages_reservation" */))
+const _179c6f06 = () => interopDefault(import('..\\pages\\test.vue' /* webpackChunkName: "pages_test" */))
 const _1671a5e4 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
 
 // TODO: remove in Nuxt 3
@@ -56,6 +57,10 @@ export const routerOptions = {
     path: "/reservation",
     component: _61d49ff0,
     name: "reservation"
+  }, {
+    path: "/test",
+    component: _179c6f06,
+    name: "test"
   }, {
     path: "/",
     component: _1671a5e4,
