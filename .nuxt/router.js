@@ -5,10 +5,12 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _55e15b6e = () => interopDefault(import('..\\pages\\about.vue' /* webpackChunkName: "pages_about" */))
 const _42a6c4c1 = () => interopDefault(import('..\\pages\\cost.vue' /* webpackChunkName: "pages_cost" */))
+const _7ad01092 = () => interopDefault(import('..\\pages\\grpc.vue' /* webpackChunkName: "pages_grpc" */))
 const _3924e28e = () => interopDefault(import('..\\pages\\introduction.vue' /* webpackChunkName: "pages_introduction" */))
 const _096e634c = () => interopDefault(import('..\\pages\\question.vue' /* webpackChunkName: "pages_question" */))
 const _10a1bbf6 = () => interopDefault(import('..\\pages\\registered.vue' /* webpackChunkName: "pages_registered" */))
 const _61d49ff0 = () => interopDefault(import('..\\pages\\reservation.vue' /* webpackChunkName: "pages_reservation" */))
+const _179c6f06 = () => interopDefault(import('..\\pages\\test.vue' /* webpackChunkName: "pages_test" */))
 const _1671a5e4 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
 
 // TODO: remove in Nuxt 3
@@ -36,6 +38,10 @@ export const routerOptions = {
     component: _42a6c4c1,
     name: "cost"
   }, {
+    path: "/grpc",
+    component: _7ad01092,
+    name: "grpc"
+  }, {
     path: "/introduction",
     component: _3924e28e,
     name: "introduction"
@@ -51,6 +57,10 @@ export const routerOptions = {
     path: "/reservation",
     component: _61d49ff0,
     name: "reservation"
+  }, {
+    path: "/test",
+    component: _179c6f06,
+    name: "test"
   }, {
     path: "/",
     component: _1671a5e4,

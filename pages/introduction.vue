@@ -2,29 +2,31 @@
   <div id="page">
     <Headers></Headers>
     <section id="page">
-      <BannersTilte :title="title" :desc="desc"></BannersTilte>
+      <BannersTilte :keys="keys"></BannersTilte>
       <section class="pt-5 pb-5">
         <div class="container">
-          <div class="row align-items-center d-flex">
+          <div class="row w-100 align-items-center d-flex">
             <div class="col-md-6 text-center">
               <h5>市面上的開店系統</h5>
-              <img
+              <!-- <img
                 class="w-50"
-                src="/images/01.png"
+                src="/images/index/contrast_01.svg"
                 data-aos="zoom-in"
                 data-aos-delay="300"
                 alt
-              />
+              /> -->
+              <SvgContrast01 class="w-100"  />
             </div>
             <div class="col-md-6 text-center">
               <h5>市面上的開店系統</h5>
-              <img
+              <!-- <img
                 class="w-50"
-                src="/images/02.png"
+                src="/images/index/contrast_02.svg"
                 data-aos="zoom-in"
                 data-aos-delay="300"
                 alt
-              />
+              /> -->
+              <SvgContrast02 class="w-100"  />
             </div>
           </div>
         </div>
@@ -34,10 +36,10 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-sm-6 col-md-3 text-center">
-              <DialogBox  :title="'商品系統'" />
+              <DialogBox :title="'商品系統'" />
               <img
                 class="w-50 pb-2"
-                src="/images/13.svg"
+                src="/images/index/features_01.svg"
                 data-aos="zoom-in"
                 data-aos-delay="300"
                 alt
@@ -47,10 +49,10 @@
               <p>可批次匯入匯出</p>
             </div>
             <div class="col-sm-6 col-md-3 text-center">
-              <DialogBox  :title="'商品系統'" />
+              <DialogBox :title="'商品系統'" />
               <img
                 class="mr-5 mr-md-5 w-50 pb-2"
-                src="/images/14.svg"
+                src="/images/index/features_02.svg"
                 data-aos="zoom-in"
                 data-aos-delay="300"
                 alt
@@ -60,10 +62,10 @@
               <p>可批次匯入匯出</p>
             </div>
             <div class="col-sm-6 col-md-3 text-center">
-              <DialogBox  :title="'商品系統'" />
+              <DialogBox :title="'商品系統'" />
               <img
                 class="w-50 pb-2"
-                src="/images/15.svg"
+                src="/images/index/features_03.svg"
                 data-aos="zoom-in"
                 data-aos-delay="500"
                 alt
@@ -73,10 +75,10 @@
               <p>可批次匯入匯出</p>
             </div>
             <div class="col-sm-6 col-md-3 text-center">
-              <DialogBox  :title="'商品系統'" />
+              <DialogBox :title="'商品系統'" />
               <img
                 class="w-50 pb-2"
-                src="/images/16.svg"
+                src="/images/index/features_04.svg"
                 data-aos="zoom-in"
                 data-aos-delay="600"
                 alt
@@ -96,9 +98,10 @@
             <div class="store text-center col-md-6 pt-3 pb-3">
               <h6>一頁式商店</h6>
               <h6>One-Page-Web</h6>
+              <!-- <div class="one-shop"></div> -->
               <img
                 class="w-50"
-                src="/images/17.svg"
+                src="/images/index/type_01.svg"
                 data-aos="zoom-in"
                 data-aos-delay="300"
                 alt
@@ -107,9 +110,10 @@
             <div class="store text-center col-md-6 pt-3 pb-3">
               <h6>網路商店</h6>
               <h6>Online Shop</h6>
+              <!-- <div class="online-shop"></div> -->
               <img
                 class="w-50"
-                src="/images/18.svg"
+                src="/images/index/type_02.svg"
                 data-aos="zoom-in"
                 data-aos-delay="300"
                 alt
@@ -127,13 +131,16 @@
 export default {
   data() {
     return {
-      title: "系統簡介",
-      desc: "系統簡介balabalabalabala"
+      keys:'introduction'
     };
   },
   created() {
-    console.log(1235555);
+
   }
 };
 </script>
+
+<style lang="scss"  scoped>
+
+</style>
 

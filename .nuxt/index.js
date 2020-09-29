@@ -18,8 +18,8 @@ import nuxt_plugin_bootstrapvue_210e1041 from 'nuxt_plugin_bootstrapvue_210e1041
 import nuxt_plugin_axios_2a496412 from 'nuxt_plugin_axios_2a496412' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_aos_caeae0de from 'nuxt_plugin_aos_caeae0de' // Source: ..\\plugins\\aos (mode: 'client')
 import nuxt_plugin_autoload_9ec2e12e from 'nuxt_plugin_autoload_9ec2e12e' // Source: ..\\components\\autoload (mode: 'all')
-import nuxt_plugin_axios_2228ef02 from 'nuxt_plugin_axios_2228ef02' // Source: ..\\plugins\\axios (mode: 'client')
 import nuxt_plugin_autoload_a4e295ee from 'nuxt_plugin_autoload_a4e295ee' // Source: ..\\plugins\\autoload (mode: 'client')
+import nuxt_plugin_axios_2228ef02 from 'nuxt_plugin_axios_2228ef02' // Source: ..\\plugins\\axios (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -200,12 +200,12 @@ async function createApp (ssrContext) {
     await nuxt_plugin_autoload_9ec2e12e(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_axios_2228ef02 === 'function') {
-    await nuxt_plugin_axios_2228ef02(app.context, inject)
-  }
-
   if (process.client && typeof nuxt_plugin_autoload_a4e295ee === 'function') {
     await nuxt_plugin_autoload_a4e295ee(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_axios_2228ef02 === 'function') {
+    await nuxt_plugin_axios_2228ef02(app.context, inject)
   }
 
   // If server-side, wait for async component to be resolved first

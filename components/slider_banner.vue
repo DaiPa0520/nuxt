@@ -8,13 +8,13 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="~/assets/images/banner01.jpg" class="d-block w-100" alt="..." />
+          <img src="/images/banner/banner1.png" class="d-block w-100" alt="..." />
         </div>
         <div class="carousel-item">
-          <img src="~/assets/images/banner01.jpg" class="d-block w-100" alt="..." />
+          <img src="/images/banner/banner2.png" class="d-block w-100" alt="..." />
         </div>
         <div class="carousel-item">
-          <img src="~/assets/images/banner01.jpg" class="d-block w-100" alt="..." />
+          <img src="/images/banner/banner3.png" class="d-block w-100" alt="..." />
         </div>
       </div>
       <a

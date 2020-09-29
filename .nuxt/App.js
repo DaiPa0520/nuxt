@@ -13,6 +13,8 @@ import '..\\node_modules\\bootstrap\\dist\\css\\bootstrap.css'
 
 import '..\\node_modules\\bootstrap-vue\\dist\\bootstrap-vue.css'
 
+import '..\\node_modules\\normalize.css\\normalize.css'
+
 import '..\\assets\\css\\bootstrap.min.css'
 
 import '..\\assets\\layout.scss'

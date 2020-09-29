@@ -39,8 +39,9 @@ export default {
   ** Global CSS
   */
   css: [
+    'normalize.css/normalize.css',
     '~/assets/css/bootstrap.min.css',
-    '~/assets/layout.scss',
+    '~/assets/layout.scss'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -50,7 +51,8 @@ export default {
     // "@/plugins/bootstrap.min.js",
     { src: "@/plugins/aos", ssr: false },
     { src: "@/components/autoload", ssr: true },
-    { src: "@/plugins/autoload", ssr: false }
+    { src: "@/plugins/autoload", ssr: false },
+    { src: "@/plugins/axios", ssr: false }
     // "~/plugins/autoload",
     // "~/components/autoload",
   ],
@@ -70,14 +72,28 @@ export default {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
+    // axios
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy'
   ],
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    // See https://github.com/nuxt-community/axios-module#options
-    baseURL: process.env.API_URL
+    // prefix: process.env.API_URL,
+    proxy: true,
+    prefix: '/api',
+    credentials: true,
+  },
+  proxy: {
+    '/api': {
+      target: 'https://ingress.4ding.site',
+      changeOrigin: true,
+      pathRewrite: {
+        '^/api': '',
+      },
+    }
   },
   /*
   ** Build configuration
@@ -86,7 +102,14 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
-    }
+   uglify: {
+      uglifyOptions: {
+        compress: {
+          drop_console: true,
+        },
+      },
+    },
+    // extend(config, ctx) {
+    // }
   }
 }
