@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     test:async function() {
-     let ip =   await this.$axios.$get("http://icanhazip.com");
+     let ip =   "123123"
      console.log("ip",ip)
      this.ip2 = ip 
     },
